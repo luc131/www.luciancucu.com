@@ -64,3 +64,24 @@
     </div>
   </div>
 </template>
+
+<script>
+
+export default {
+  data () {
+    return {
+      loadedPosts: [
+        {
+          id: 1,
+          title: 'First Post',
+          previewText: 'This is our first post'
+        }
+      ]
+    }
+  },
+  async fetch () {
+    const url = 'https://api.revas.app/feeds/directories/blog-it/feed.json?public_key=01f9k40fwm4exjsptqd1gxhraw'
+    const { data } = await this.$axios.get(url)
+    this.post.id = data
+  }
+}
