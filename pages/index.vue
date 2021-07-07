@@ -6,7 +6,7 @@
       </h1>
       <h2 class="text-white text-left pl-2 md:pl-20 pt-20">
         Tirocinio presso <span class="font-semibold">REVAS
-          Societa Benefit</span> Trento.
+          Società Benefit</span> Trento.
         Master in "Esperto in Innovazione Tecnologica applicata".
       </h2>
       <h3 class="text-white text-left pl-1.5 md:pl-20 pb-20">
@@ -64,24 +64,3 @@
     </div>
   </div>
 </template>
-
-<script>
-
-export default {
-  data () {
-    return {
-      loadedPosts: [
-        {
-          id: 1,
-          title: 'First Post',
-          previewText: 'This is our first post'
-        }
-      ]
-    }
-  },
-  async fetch () {
-    const url = 'https://api.revas.app/feeds/directories/blog-it/feed.json?public_key=01f9k40fwm4exjsptqd1gxhraw'
-    const { data } = await this.$axios.get(url)
-    this.post.id = data
-  }
-}
