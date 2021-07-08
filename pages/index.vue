@@ -62,5 +62,39 @@
         </a>
       </div>
     </div>
+    <div>
+      <section>
+        BLOG
+        {{ feed }}
+        <PostPreview
+          v-for="post in feed.items"
+          :id="post.id"
+          :key="post.id"
+          :title="post.title"
+          :preview-text="post.content_html"
+        />
+      </section>
+    </div>
   </div>
 </template>
+
+<script>
+import PostPreview from '@/components/Items/PostPreview.vue'
+
+export default {
+  data () {
+    return {
+      feed: {}
+    }
+  },
+  components: {
+    PostPreview
+  },
+  async fetch () {
+    const url = 'https://api.revas.app/feeds/directories/blog-it/feed.json?public_key=01f9k40fwm4exjsptqd1gxhraw'
+    const { data } = await this.$axios.get(url)
+    this.feed = data
+  }
+}
+
+</script>

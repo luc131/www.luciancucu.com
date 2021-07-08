@@ -1,5 +1,6 @@
 <template>
   <div>
+    LoL
     <nuxt-link :to="'/items' + id" class="post-preview">
       <post>
         <div
@@ -12,9 +13,6 @@
         </div>
       </post>
     </nuxt-link>
-  </div>
-  </post>
-  </nuxt-link>
   </div>
 </template>
 
