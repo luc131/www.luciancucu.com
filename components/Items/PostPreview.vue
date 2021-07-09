@@ -1,17 +1,15 @@
 <template>
   <div>
-    LoL
+    Blog
     <nuxt-link :to="'/items' + id" class="post-preview">
-      <post>
-        <div
-          class="post-thumnail"
-          :style="{backgroundImage: 'url(' + thumbnail + ')'}"
-        />
-        <div class="post-content">
-          <h1>{{ title }}</h1>
-          <p>{{ previewText }}</p>
-        </div>
-      </post>
+      <div
+        class="post-thumnail"
+        :style="{backgroundImage: 'url(' + thumbnail + ')'}"
+      />
+      <div class="post-content target=blank">
+        <h1>{{ title }}</h1>
+        <p><span v-html="previewText" /></p>
+      </div>
     </nuxt-link>
   </div>
 </template>

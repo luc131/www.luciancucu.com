@@ -1,6 +1,9 @@
 <template>
   <div>
     <div class="bg-green-900">
+      <div class="topnav text-white">
+        <a class="active" href="#blog" target="_blank">Blog</a>
+      </div>
       <h1 class="text-white text-left pl-3 md:pl-20 pt-20 text-3xl">
         <span class="font-semibold">Lucian Cucu</span>
       </h1>
@@ -64,8 +67,6 @@
     </div>
     <div>
       <section>
-        BLOG
-        {{ feed }}
         <PostPreview
           v-for="post in feed.items"
           :id="post.id"
@@ -82,13 +83,13 @@
 import PostPreview from '@/components/Items/PostPreview.vue'
 
 export default {
+  components: {
+    PostPreview
+  },
   data () {
     return {
       feed: {}
     }
-  },
-  components: {
-    PostPreview
   },
   async fetch () {
     const url = 'https://api.revas.app/feeds/directories/blog-it/feed.json?public_key=01f9k40fwm4exjsptqd1gxhraw'
