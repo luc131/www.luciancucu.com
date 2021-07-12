@@ -1,6 +1,8 @@
 <template>
   <div>
-    Blog
+    <div class="text-center text-3xl text-green-700">
+      Blog
+    </div>
     <nuxt-link :to="'/items' + id" class="post-preview">
       <div
         class="post-thumnail"
@@ -32,7 +34,7 @@ export default {
     },
     thumbnail: {
       type: String,
-      required: true
+      required: false
     }
   }
 }
