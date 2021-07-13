@@ -1,18 +1,17 @@
 <template>
   <div>
-    <div class="text-center text-3xl text-green-700">
-      Blog
+    <div
+      class="post-thumnail"
+      :style="{backgroundImage: 'url(' + thumbnail + ')'}"
+    />
+    <div class="post-content target=blank">
+      <h1 class="text-center text-5xl">
+        {{ title }}
+      </h1>
+      <article class="mx-auto prose lg:prose-xl">
+        <div v-html="previewText" />
+      </article>
     </div>
-    <nuxt-link :to="'/items' + id" class="post-preview">
-      <div
-        class="post-thumnail"
-        :style="{backgroundImage: 'url(' + thumbnail + ')'}"
-      />
-      <div class="post-content target=blank">
-        <h1>{{ title }}</h1>
-        <p><span v-html="previewText" /></p>
-      </div>
-    </nuxt-link>
   </div>
 </template>
 
@@ -39,52 +38,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: - 2px 2 px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-.post-content {
-    padding: 10px;
-    text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-    background-color: #ccc;
-}
-
-.featured-posts {
-    display: flex;
-    padding: 20px;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (min-width: 850px) {
-    .post-preview {
-        width: 400px;
-        margin: 10px;
-    }
-}
-
-.post-thumbnail {
-    width: 100%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-}
-
-</style>
