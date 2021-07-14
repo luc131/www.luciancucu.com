@@ -5,27 +5,33 @@
     <div v-else-if="$fetchState.error" key="error" />
     <div v-else key="success">
       <div class="bg-green-900">
-        <h1 class="text-white text-left pl-3 md:pl-20 pt-20 text-3xl">
+        <h1 class="text-gray-200 text-left pl-3 md:pl-20 pt-10 text-3xl">
           <span class="font-semibold">Lucian Cucu</span>
         </h1>
-      <h2 class="text-white text-left pl-3 md:pl-20 text-base">Blogger</h2>
-      <button type="submit" class="bg-white text-green-700 font-bold py-1 px-3 rounded-full ml-16" href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/3135c2a5-e69a-4316-8e2e-dfc2efabeecf?view=html" target="_blank">
-        About me
-      </button>
-        </div>
-        <div>
+        <h2 class="text-gray-300 underline text-left pl-3 md:pl-20 text-lg">
+          Writer
+        </h2>
+        <h3 class="text-gray-200 text-left pl-3 md:pl-20 text-sm">
+          Click the button below to see my europass profile!
+        </h3>
+        <a href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/3135c2a5-e69a-4316-8e2e-dfc2efabeecf?view=html" target="_blank">
+          <button class="bg-green-100 text-green-700 font-bold py-1 px-3 rounded-full ml-16">
+            About me
+          </button>
+        </a>
+      </div>
+      <div>
         <section>
-          <div class="text-center text-3xl text-green-700">
+          <div class="text-center decoration-clone bg-gradient-to-b from-green-900 to-green-500 text-gray-100 text-lg font-semi-bold">
             Blog
           </div>
-          <div>
+          <div v-for="post in feed.items" :key="post.id">
             <PostPreview
-              v-for="post in feed.items"
               :id="post.id"
-              :key="post.id"
               :title="post.title"
               :preview-text="post.content_html"
             />
+            {{ post.date_published }}
           </div>
         </section>
       </div>
