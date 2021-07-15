@@ -8,8 +8,10 @@
       <h1 class="text-center text-4xl pt-8">
         {{ title }}
       </h1>
-      <div class="border-b border-green-600 mb-8 mx-auto prose lg:prose-xl">
-        </div>
+      <div class="border-b border-green-600 mb-8 mx-auto prose lg:prose-xl" />
+      <p class="mx-auto prose lg:prose-xl">
+        {{ publishedOn }}
+      </p>
       <article class="mx-auto prose lg:prose-xl">
         <div v-html="previewText" />
       </article>
@@ -36,6 +38,15 @@ export default {
     thumbnail: {
       type: String,
       required: false
+    },
+    postdate: {
+      type: String,
+      required: true
+    }
+  },
+  computed: {
+    publishedOn () {
+      return new Date(this.postdate).toLocaleDateString('it-IT')
     }
   }
 }
