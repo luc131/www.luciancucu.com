@@ -4,6 +4,7 @@
     <div v-if="$fetchState.pending" key="pending" />
     <div v-else-if="$fetchState.error" key="error" />
     <div v-else key="success">
+      <a id="top" />
       <div class="bg-green-900">
         <h1 class="text-gray-200 text-left pl-3 md:pl-20 pt-10 text-3xl">
           <span class="font-semibold">Lucian Cucu</span>
@@ -31,13 +32,18 @@
               :postdate="post.date_published"
             />
           </div>
-          <a id="top" class="bg-green-600 text-gray-200 font-bold py-1 px-3 rounded-full mx-auto prose lg:prose-xl">
-            Back to top
-          </a>
-          <a href="#top" />
+          <a class="bg-green-100 text-green-700 font-bold py-1 px-3 rounded-full mx-auto prose lg:prose-xl ml-10" href="#top">Back to top</a>
         </section>
       </div>
     </div>
+    <footer class="decoration-clone bg-gradient-to-b from-green-800 to-green-600">
+      <p class="mx-auto lg:prose-base text-center text-gray-200">
+        Autore: Lucian Cucu
+      </p>
+      <p class="mx-auto lg:prose-base text-center text-gray-200">
+        All rights reserved 2021
+      </p>
+    </footer>
   </div>
 </template>
 
