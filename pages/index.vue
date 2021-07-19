@@ -67,7 +67,7 @@ export default {
   },
   head () {
     return {
-      title:"Lucian Cucu",
+      title:"Lucian Cucu | Blog",
       meta: metadata({
         title:"",
         description:"",
