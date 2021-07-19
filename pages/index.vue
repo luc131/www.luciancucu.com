@@ -15,7 +15,7 @@
         <h3 class="text-gray-200 text-left pl-3 md:pl-20 text-sm">
           Click the button below to see my europass profile!
         </h3>
-        <a class="bg-green-100 text-green-700 font-bold py-1 px-3 rounded-full ml-16" href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/3135c2a5-e69a-4316-8e2e-dfc2efabeecf?view=html" target="_blank">
+        <a class="md:w-32 lg:w-48 bg-green-100 text-green-700 font-bold py-1 px-3 rounded-full ml-16" href="https://europa.eu/europass/eportfolio/api/eprofile/shared-profile/3135c2a5-e69a-4316-8e2e-dfc2efabeecf?view=html" target="_blank">
           About me
         </a>
       </div>
@@ -49,6 +49,7 @@
 
 <script>
 import PostPreview from '@/components/Items/PostPreview.vue'
+import metadata from '@/utils/metadata'
 
 export default {
   components: {
@@ -63,6 +64,17 @@ export default {
     const url = 'https://api.revas.app/feeds/directories/blog-it/feed.json?public_key=01f9k40fwm4exjsptqd1gxhraw'
     const { data } = await this.$axios.get(url)
     this.feed = data
+  },
+  head () {
+    return {
+      title:"Lucian Cucu",
+      meta: metadata({
+        title:"",
+        description:"",
+        image:"",
+        url:"https://luciancucu.com/",
+      })
+    }
   }
 }
 
