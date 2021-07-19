@@ -70,7 +70,7 @@ export default {
       title:"Lucian Cucu | Blog",
       meta: metadata({
         title:"",
-        description:"",
+        description:"My personal page and blog. You will find many fun and interesting articles about muscic, travel and other cool stuff!",
         image:"",
         url:"https://luciancucu.com/",
       })
