@@ -1,10 +1,10 @@
 
 <template>
-  <div> 
+  <div>
     <div v-if="$fetchState.pending" key="pending" />
     <div v-else-if="$fetchState.error" key="error" />
     <div v-else key="success">
-      <a id="" />
+      <a id="top" />
       <div class="bg-green-900">
         <h1 class="text-gray-200 text-left pl-3 md:pl-20 pt-10 text-3xl">
           <span class="font-semibold">Lucian Cucu</span>
@@ -38,7 +38,7 @@
     </div>
     <footer class="decoration-clone bg-gradient-to-b from-green-800 to-green-600">
       <p class="mx-auto lg:prose-base text-center text-gray-200">
-        Autore: Lucian Cucu
+        Author: Lucian Cucu
       </p>
       <p class="mx-auto lg:prose-base text-center text-gray-200">
         All rights reserved 2021
