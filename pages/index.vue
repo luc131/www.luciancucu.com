@@ -4,7 +4,7 @@
     <div v-if="$fetchState.pending" key="pending" />
     <div v-else-if="$fetchState.error" key="error" />
     <div v-else key="success">
-      <a id="top" />
+      <a id="" />
       <div class="bg-green-900">
         <h1 class="text-gray-200 text-left pl-3 md:pl-20 pt-10 text-3xl">
           <span class="font-semibold">Lucian Cucu</span>
