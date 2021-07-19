@@ -1,6 +1,6 @@
 
 <template>
-  <div>
+  <div> 
     <div v-if="$fetchState.pending" key="pending" />
     <div v-else-if="$fetchState.error" key="error" />
     <div v-else key="success">
