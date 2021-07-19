@@ -71,7 +71,7 @@ export default {
       meta: metadata({
         title:"",
         description:"My personal page and blog. You will find many fun and interesting articles about muscic, travel and other cool stuff!",
-        image:"",
+        image:"https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8d2ViJTIwZGV2ZWxvcG1lbnR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
         url:"https://luciancucu.com/",
       })
     }
